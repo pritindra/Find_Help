@@ -1,0 +1,92 @@
+{% extends 'interface/base.html' %}
+
+{% block content %}
+
+<!-- ---------- Form ---------- -->
+
+<div class="container my-2">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputName4">Name</label>
+                <input type="text" class="form-control" id="inputName4">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputAddress">NGO (if any)</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="XXXX YYYY">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress2">Address</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputZip">PIN code</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputOccupation">Volunteer type</label>
+                <select id="inputOccupation" class="form-control">
+                    <option selected>Choose...</option>
+                    <option value="1">Virtual</option>
+                    <option value="2">In-person</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputPhone">Phone number</label>
+                <input type="text" class="form-control" id="inputPhone">
+            </div>
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label for="inputOccupation">Type of assistance can provide</label>
+                <select id="inputOccupation" class="form-control">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputCity">Select city to offer assistance</label>
+                <select id="inputCity" class="form-control">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="messageArea">Message</label>
+                <textarea class="form-control" id="messageArea" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
