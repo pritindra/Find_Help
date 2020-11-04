@@ -1,0 +1,82 @@
+{% extends 'interface/base.html' %}
+
+{% block content %}
+
+      <!-- ---------- Form ---------- -->
+
+      <div class="container my-2">
+        <form method="POST">
+          {% csrf_token %}
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" name="email">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputName4">Name</label>
+                <input type="text" class="form-control" id="inputName4" name="name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="inputOccupation">Occupation</label>
+                <select id="inputOccupation" name="" class="form-control">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputPhone">Phone number</label>
+                <input type="text" class="form-control" id="inputPhone" name="phone_number">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" name="address1" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Address 2</label>
+              <input type="text" class="form-control" name="address2" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" name="city" id="inputCity">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" name="state" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputZip">PIN code</label>
+                <input type="text" class="form-control" name="pin" id="inputZip">
+              </div>
+            </div>
+
+            <div class="form-row">
+  
+              <div class="form-group col-md-6">
+                <label for="inputOccupation">Type of assistance needed</label>
+                <select id="inputOccupation" name="assistance_needed" class="form-control">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="messageArea">Message</label>
+              <textarea class="form-control" name="message" id="messageArea" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+      </div>
+
+{% endblock %}
