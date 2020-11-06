@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_email_verification',
     'rest_framework',
     'interface'
 ]
@@ -138,3 +139,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+# Email verification
+EMAIL_ACTIVE_FIELD = 'is_active'
+EMAIL_SERVER = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_ADDRESS = 'mymail@gmail.com'
+EMAIL_FROM_ADDRESS = 'noreply@aliasaddress.com'
+EMAIL_PASSWORD = 'mYC00lP4ssw0rd' # os.environ['password_key'] suggested
+EMAIL_MAIL_SUBJECT = 'Confirm your email'
+EMAIL_MAIL_HTML = 'mail_body.html'
+EMAIL_MAIL_PLAIN = 'mail_body.txt'
+EMAIL_PAGE_TEMPLATE = 'confirm_email.html'
+# EMAIL_PAGE_DOMAIN = 'http://mydomain.com/'

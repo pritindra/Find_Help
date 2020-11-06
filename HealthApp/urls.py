@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django_email_verification import urls as mail_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('interface.urls')),
-    path('api-v1/', include('interface.api_urls'))
+    path('api-v1/', include('interface.api_urls')),
+    path('email/', include(mail_urls))
 ]
