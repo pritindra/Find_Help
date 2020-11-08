@@ -35,3 +35,13 @@ class CanAssist(models.Model):
 
     def __str__(self):
         return self.name
+
+class AcceptedOffer(models.Model):
+    name = models.ForeignKey(CanAssist, on_delete=models.CASCADE)
+    assistance_offer = models.CharField(max_length=50)
+    accepted = models.BooleanField()
+
+class AcceptedAssist(models.Model):
+    name = models.ForeignKey(Assistance, on_delete=models.CASCADE)
+    assistance_offer = models.CharField(max_length=50)
+    accepted = models.BooleanField()
